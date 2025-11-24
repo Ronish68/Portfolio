@@ -66,12 +66,12 @@ useEffect(() => {
                     <span className='text-stroke text-transparent'> Projects</span>
                 </h1>
                 <div className="workgrid workgrid1 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-                            <div className="workimage1 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
+                            <div className="workimage1 w-auto lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
                               <Image
                                 src="/workimage.jpg"
                                 alt="Hero Portrait"
-                                width={4000}
-                                height={4000}
+                                width={1800}
+                                height={450}
                                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
                               />
                             </div>
@@ -90,12 +90,12 @@ useEffect(() => {
                             </div>
                           </div>
                           <div className="workgrid workgrid2 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-                            <div className="workimage2 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
+                            <div className="workimage2 w-auto lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
                               <Image
                                 src="/workimage.jpg"
                                 alt="Hero Portrait"
-                                width={4000}
-                                height={4000}
+                                width={1800}
+                                height={450}
                                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
                               />
                             </div>
@@ -114,12 +114,12 @@ useEffect(() => {
                             </div>
                           </div>
                           <div className="workgrid workgrid3 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-                            <div className="workimage3 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
+                            <div className="workimage3 w-auto lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
                               <Image
                                 src="/workimage.jpg"
                                 alt="Hero Portrait"
-                                width={4000}
-                                height={4000}
+                                width={1800}
+                                height={450}
                                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
                               />
                             </div>

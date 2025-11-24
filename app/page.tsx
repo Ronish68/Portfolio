@@ -93,23 +93,61 @@ const HomePage = () => {
   const scaleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!scaleRef.current) return;
+  if (!scaleRef.current) return;
+
+  const ctx = gsap.context(() => {
     gsap.set(scaleRef.current, {
       scale: 1,
       transformOrigin: "center center"
     });
 
-    gsap.to(scaleRef.current, {
-      scale: 1.7,
-      ease: "none",
-      scrollTrigger: {
-        trigger: scaleRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
+    // Mobile
+    const mm = gsap.matchMedia();
+    
+    mm.add("(max-width: 639px)", () => {
+      gsap.to(scaleRef.current, {
+        scale: 1.3,
+        ease: "none",
+        scrollTrigger: {
+          trigger: scaleRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
     });
-  }, []);
+
+    // Tablet
+    mm.add("(min-width: 640px) and (max-width: 1023px)", () => {
+      gsap.to(scaleRef.current, {
+        scale: 1.5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: scaleRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    });
+
+    // Desktop
+    mm.add("(min-width: 1024px)", () => {
+      gsap.to(scaleRef.current, {
+        scale: 1.7,
+        ease: "none",
+        scrollTrigger: {
+          trigger: scaleRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    });
+  });
+
+  return () => ctx.revert();
+}, []);
 
   const img1 = useRef<HTMLImageElement>(null);
   const img2 = useRef<HTMLImageElement>(null);
@@ -119,21 +157,19 @@ const HomePage = () => {
     <>
       <section className="hero-section relative w-full h-screen bg-black overflow-hidden">
         <Nav />
-
         <div className="absolute inset-0 flex justify-center items-center">
-
           <div ref={scaleRef} className="w-[340px] sm:w-[420px] md:w-[500px] lg:w-[540px] max-w-full absolute z-5">
             <Image
               src="/ronish12.jpg"
               alt="Hero Portrait"
-              width={4000}
-              height={4000}
+              width={720}
+              height={480}
               className=" w-full h-auto "
             />
           </div>
           <div className="relative flex justify-center items-center w-full">
 
-            <h1 className="absolute uppercase text-white font-bold z-1 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="absolute uppercase text-white font-bold z-1 text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
               Web Developer
               {/* <Typewriter
                 options={{
@@ -147,7 +183,7 @@ const HomePage = () => {
               /> */}
             </h1>
 
-            <h1 className="absolute hero-text uppercase text-white font-bold z-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="absolute hero-text uppercase text-white font-bold z-10 text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
               Web Developer
 
               {/* <Typewriter
@@ -167,8 +203,8 @@ const HomePage = () => {
       </section>
 
       <section className=''>
-        <div className="about textSlideUp w-full max-w-[800px] mx-4 sm:mx-10 my-20 sm:my-40 font-bold">
-          <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-normal'
+        <div className="about textSlideUp w-full max-w-[800px] mx-5 sm:mx-10 my-10 md:my-40 font-bold">
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-normal'
           >Hi, i'm a passionate
             <span className='text-stroke text-transparent'> web developer </span>
             from patan,
@@ -269,12 +305,12 @@ const HomePage = () => {
             <span className='text-stroke text-transparent'> my works</span>
           </h1>
           <div className="workgrid workgrid1 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-            <div className="workimage1 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
+            <div className="workimage1 w-auto  lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
-                width={4000}
-                height={4000}
+                width={1800}
+                height={450}
                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>
@@ -293,12 +329,12 @@ const HomePage = () => {
             </div>
           </div>
           <div className="workgrid workgrid2 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-            <div className="workimage2 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
+            <div className="workimage2 w-auto lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
-                width={4000}
-                height={4000}
+                width={1800}
+                height={450}
                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>
@@ -317,12 +353,12 @@ const HomePage = () => {
             </div>
           </div>
           <div className="workgrid workgrid3 flex flex-col lg:flex-row my-20 lg:pr-20 ">
-            <div className="workimage3 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
+            <div className="workimage3 w-auto lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
-                width={4000}
-                height={4000}
+                width={1800}
+                height={450}
                 className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>

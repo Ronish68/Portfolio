@@ -29,6 +29,8 @@ body {
   color: var(--foreground);
   font-family: montserrat;
   background-color: #000;
+    overflow-x: hidden;
+
 }
 /* .solid-text {
   position: absolute;
