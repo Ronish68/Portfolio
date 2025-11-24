@@ -10,10 +10,10 @@ const Nav = () => {
   return (
     <>
 
-      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-20">
+      <div className="fixed top-0 left-0 w-full flex justify-between items-center px-6 sm:px-10 py-6 z-20">
 
         <div className='logo'>
-          <Link href="/" className="text-white text-3xl font-bold tracking-wide bg-zinc-900 rounded">
+          <Link href="/" className="text-white text-2xl sm:text-3xl font-bold tracking-wide bg-zinc-900 rounded">
             RONISH
           </Link>
         </div>
@@ -47,9 +47,6 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-
-
-
     </>
   )
 }

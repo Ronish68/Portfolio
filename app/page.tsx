@@ -122,7 +122,7 @@ const HomePage = () => {
 
         <div className="absolute inset-0 flex justify-center items-center">
 
-          <div ref={scaleRef} className="w-[540px] max-w-full absolute z-5">
+          <div ref={scaleRef} className="w-[340px] sm:w-[420px] md:w-[500px] lg:w-[540px] max-w-full absolute z-5">
             <Image
               src="/ronish12.jpg"
               alt="Hero Portrait"
@@ -133,7 +133,7 @@ const HomePage = () => {
           </div>
           <div className="relative flex justify-center items-center w-full">
 
-            <h1 className="absolute uppercase text-white text-8xl font-bold z-1">
+            <h1 className="absolute uppercase text-white font-bold z-1 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
               Web Developer
               {/* <Typewriter
                 options={{
@@ -147,7 +147,7 @@ const HomePage = () => {
               /> */}
             </h1>
 
-            <h1 className="absolute hero-text uppercase text-white text-8xl font-bold z-10">
+            <h1 className="absolute hero-text uppercase text-white font-bold z-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
               Web Developer
 
               {/* <Typewriter
@@ -167,8 +167,8 @@ const HomePage = () => {
       </section>
 
       <section className=''>
-        <div className="about textSlideUp w-200 mx-10 my-40 font-bold">
-          <h1 className='text-6xl uppercase tracking-normal'
+        <div className="about textSlideUp w-full max-w-[800px] mx-4 sm:mx-10 my-20 sm:my-40 font-bold">
+          <h1 className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-normal'
           >Hi, i'm a passionate
             <span className='text-stroke text-transparent'> web developer </span>
             from patan,
@@ -180,7 +180,7 @@ const HomePage = () => {
 
       <section className="uppercase  overflow-hidden">
         <div className='space-y-10'>
-          <h1 ref={techRef1} className='text-6xl font-bold whitespace-nowrap flex my-10'>
+          <h1 ref={techRef1} className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap flex my-10'>
             <span>
               Node /
               <span className='text-stroke text-transparent'> React </span>
@@ -206,7 +206,7 @@ const HomePage = () => {
               <span className='text-stroke text-transparent'> Typescript </span>
             </span>
           </h1>
-          <h1 ref={techRef2} className='text-6xl font-bold whitespace-nowrap'>
+          <h1 ref={techRef2} className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap'>
             <span>
               HTML /
               <span className='text-stroke text-transparent'> CSS </span>
@@ -235,28 +235,28 @@ const HomePage = () => {
           </h1>
         </div>
       </section>
-      <section className="educationAndExperience flex">
-        <div className='Experience w-1/2 ml-10 mt-30 '>
-          <h1 className='flex justify-center uppercase text-4xl font-bold textSlideUp'>Experience</h1>
-          <div className="ExpGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full h-[140px]">
+      <section className="educationAndExperience flex flex-col md:flex-row gap-10 px-6 sm:px-10 py-20">
+        <div className='Experience w-full md:w-1/2 md:ml-10 md:mt-30 '>
+          <h1 className='flex justify-center uppercase text-3xl sm:text-4xl font-bold textSlideUp'>Experience</h1>
+          <div className="ExpGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full min-h-[140px]">
             <h1 className=' uppercase font-bold'>Internship</h1>
             <span className='text-neutral-400 font-medium '>2025-current</span>
             <span className='text-neutral-400 font-medium'>Next In Tech Pvt Ltd, Tahachal, Kathmandu</span>
           </div>
         </div>
-        <div className="education w-1/2 mx-10 my-30">
-          <h1 className='flex justify-center uppercase text-4xl font-bold textSlideUp text-stroke text-transparent'>Education</h1>
-          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full h-[140px]">
+        <div className="education w-full md:w-1/2 md:mx-10 md:my-30">
+          <h1 className='flex justify-center uppercase text-3xl sm:text-4xl font-bold textSlideUp text-stroke text-transparent'>Education</h1>
+          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full min-h-[140px]">
             <h1 className=' uppercase font-bold'>SEE</h1>
             <span className='text-neutral-400 font-medium '>2019</span>
             <span className='text-neutral-400 font-medium'>Milestone School, Lagankhel, Lalitpur</span>
           </div>
-          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full h-[140px]">
+          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full min-h-[140px]">
             <h1 className=' uppercase font-bold'>+2</h1>
             <span className='text-neutral-400 font-medium'>2019-2021</span>
             <span className='text-neutral-400 font-medium'>Nightingale College, Kupondole, Lalitpur</span>
           </div>
-          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full h-[140px]">
+          <div className="eduGrid workgrid flex flex-col bg-zinc-900 p-5 my-5 rounded-lg w-full min-h-[140px]">
             <h1 className=' uppercase font-bold'>Bachelors in Computer Application</h1>
             <span className='text-neutral-400 font-medium'>2021-current</span>
             <span className='text-neutral-400 font-medium'>Nagarjuna College of Information Technology, Sankhamul, Lalitpur</span>
@@ -265,76 +265,76 @@ const HomePage = () => {
       </section>
       <section className='projects'>
         <div className="works">
-          <h1 className='textSlideUp uppercase text-6xl font-bold mt-40 ml-10 '>some of
+          <h1 className='textSlideUp uppercase text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold md:mt-20 m-5 md:ml-10 '>some of
             <span className='text-stroke text-transparent'> my works</span>
           </h1>
-          <div className="workgrid workgrid1 flex my-20 pr-20 ">
-            <div className="workimage1 w-[1800px] mx-10 duration-1000" ref={img1}>
+          <div className="workgrid workgrid1 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+            <div className="workimage1 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
                 width={4000}
                 height={4000}
-                className=" w-full h-[450px] rounded-xl object-cover "
+                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>
             <div className="workdesc1 flex flex-col">
-              <div className="desc">
-                <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                <p className='text-neutral-400 font-medium my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
                 <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
               </div>
               <div className="button1 mt-auto">
-                <button className='uppercase font-medium p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
                   onMouseEnter={() => img1.current?.classList.add('scale-80', 'grayscale')}
                   onMouseLeave={() => img1.current?.classList.remove('scale-80', 'grayscale')}
                 >view project</button>              </div>
             </div>
           </div>
-          <div className="workgrid workgrid2 flex my-20 pr-20">
-            <div className="workimage2 w-[1800px] mx-10 duration-1000" ref={img2}>
+          <div className="workgrid workgrid2 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+            <div className="workimage2 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
                 width={4000}
                 height={4000}
-                className=" w-full h-[450px] rounded-xl object-cover "
+                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>
             <div className="workdesc2 flex flex-col">
-              <div className="desc">
-                <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                <p className='text-neutral-400 font-medium my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
                 <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
               </div>
               <div className="button2 mt-auto">
-                <button className='uppercase font-medium p-5 cursor-pointer items-end bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
                   onMouseEnter={() => img2.current?.classList.add('scale-80', 'grayscale')}
                   onMouseLeave={() => img2.current?.classList.remove('scale-80', 'grayscale')}
                 >view project</button>              </div>
             </div>
           </div>
-          <div className="workgrid workgrid3 flex my-20 pr-20">
-            <div className="workimage3 w-[1800px] mx-10 duration-1000" ref={img3}>
+          <div className="workgrid workgrid3 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+            <div className="workimage3 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
               <Image
                 src="/workimage.jpg"
                 alt="Hero Portrait"
                 width={4000}
                 height={4000}
-                className=" w-full h-[450px] rounded-xl object-cover "
+                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
               />
             </div>
             <div className="workdesc3 flex flex-col">
-              <div className="desc">
-                <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                <p className='text-neutral-400 font-medium my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
                 <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
               </div>
-              <div className="button3 mt-auto">
-                <button className='uppercase font-medium p-5 cursor-pointer items-end bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+              <div className="button1 mt-auto">
+                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
                   onMouseEnter={() => img3.current?.classList.add('scale-80', 'grayscale')}
                   onMouseLeave={() => img3.current?.classList.remove('scale-80', 'grayscale')}
                 >view project</button>

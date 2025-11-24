@@ -62,79 +62,82 @@ useEffect(() => {
         <>
             <Nav />
             <div className="works">
-                <h1 className='textSlideUp uppercase text-6xl font-bold mt-40 ml-10 '>My
+                <h1 className='textSlideUp uppercase text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-40 ml-10 '>My
                     <span className='text-stroke text-transparent'> Projects</span>
                 </h1>
-                <div className="workgrid workgrid1 flex my-20 pr-20 ">
-                    <div className="workimage1 w-[1800px] mx-10 duration-1000" ref={img1}>
-                        <Image
-                            src="/workimage.jpg"
-                            alt="Hero Portrait"
-                            width={4000}
-                            height={4000}
-                            className=" w-full h-[450px] rounded-xl object-cover "
-                        />
-                    </div>
-                    <div className="workdesc1 flex flex-col">
-                        <div className="desc">
-                            <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                            <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                            <p className='text-neutral-400 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
-                        </div>
-                        <div className="button1 mt-auto">
-                            <button className='uppercase font-medium p-5 items-end bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
-                                onMouseEnter={() => img1.current?.classList.add('scale-80', 'grayscale')}
-                                onMouseLeave={() => img1.current?.classList.remove('scale-80', 'grayscale')}
-                            >view project</button>              </div>
-                    </div>
-                </div>
-                <div className="workgrid workgrid2 flex my-20 pr-20">
-                    <div className="workimage2 w-[1800px] mx-10 duration-1000" ref={img2}>
-                        <Image
-                            src="/workimage.jpg"
-                            alt="Hero Portrait"
-                            width={4000}
-                            height={4000}
-                            className=" w-full h-[450px] rounded-xl object-cover "
-                        />
-                    </div>
-                    <div className="workdesc2 flex flex-col">
-                        <div className="desc">
-                            <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                            <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                            <p className='text-neutral-400 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
-                        </div>
-                        <div className="button2 mt-auto">
-                            <button className='uppercase font-medium p-5 items-end bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
-                                onMouseEnter={() => img2.current?.classList.add('scale-80', 'grayscale')}
-                                onMouseLeave={() => img2.current?.classList.remove('scale-80', 'grayscale')}
-                            >view project</button>              </div>
-                    </div>
-                </div>
-                <div className="workgrid workgrid3 flex my-20 pr-20">
-                    <div className="workimage3 w-[1800px] mx-10 duration-1000" ref={img3}>
-                        <Image
-                            src="/workimage.jpg"
-                            alt="Hero Portrait"
-                            width={4000}
-                            height={4000}
-                            className=" w-full h-[450px] rounded-xl object-cover "
-                        />
-                    </div>
-                    <div className="workdesc3 flex flex-col">
-                        <div className="desc">
-                            <h1 className='uppercase text-4xl font-bold mt-10'>E-commerce Website</h1>
-                            <h2 className='my-5 text-neutral-400 font-semibold'>Website development</h2>
-                            <p className='text-neutral-400 font-medium'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
-                        </div>
-                        <div className="button3 mt-auto">
-                            <button className='uppercase font-medium p-5 items-end bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
-                                onMouseEnter={() => img3.current?.classList.add('scale-80', 'grayscale')}
-                                onMouseLeave={() => img3.current?.classList.remove('scale-80', 'grayscale')}
-                            >view project</button>
-                        </div>
-                    </div>
-                </div>
+                <div className="workgrid workgrid1 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+                            <div className="workimage1 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img1}>
+                              <Image
+                                src="/workimage.jpg"
+                                alt="Hero Portrait"
+                                width={4000}
+                                height={4000}
+                                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
+                              />
+                            </div>
+                            <div className="workdesc1 flex flex-col">
+                              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+                                <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
+                              </div>
+                              <div className="button1 mt-auto">
+                                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+                                  onMouseEnter={() => img1.current?.classList.add('scale-80', 'grayscale')}
+                                  onMouseLeave={() => img1.current?.classList.remove('scale-80', 'grayscale')}
+                                >view project</button>              </div>
+                            </div>
+                          </div>
+                          <div className="workgrid workgrid2 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+                            <div className="workimage2 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img2}>
+                              <Image
+                                src="/workimage.jpg"
+                                alt="Hero Portrait"
+                                width={4000}
+                                height={4000}
+                                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
+                              />
+                            </div>
+                            <div className="workdesc2 flex flex-col">
+                              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+                                <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
+                              </div>
+                              <div className="button2 mt-auto">
+                                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+                                  onMouseEnter={() => img2.current?.classList.add('scale-80', 'grayscale')}
+                                  onMouseLeave={() => img2.current?.classList.remove('scale-80', 'grayscale')}
+                                >view project</button>              </div>
+                            </div>
+                          </div>
+                          <div className="workgrid workgrid3 flex flex-col lg:flex-row my-20 lg:pr-20 ">
+                            <div className="workimage3 w-[445px] sm:w-[630px] md:w-[720px] lg:w-[1800px] mx-5 md:mx-10 duration-1000" ref={img3}>
+                              <Image
+                                src="/workimage.jpg"
+                                alt="Hero Portrait"
+                                width={4000}
+                                height={4000}
+                                className=" w-full h-[300px] md:h-[450px] rounded-xl object-cover "
+                              />
+                            </div>
+                            <div className="workdesc3 flex flex-col">
+                              <div className="desc mx-5 md:mx-10 lg:mx-0">
+                                <h1 className='uppercase text-3xl sm:text-4xl font-bold mt-10'>E-commerce Website</h1>
+                                <h2 className='my-2 md:my-5 lg:my-5 text-neutral-400 font-semibold'>Website development</h2>
+                                <p className='text-neutral-400 font-medium my-2 md:my-5 lg:my-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut error at facilis ex incidunt consequatur nisi expedita tempore ipsum. Architecto impedit eaque minima dolorem! Deleniti molestias cumque earum distinctio nesciunt.</p>
+                                <span className='techStack text-neutral-400 font-medium'>Tech Stack: Nextjs, Nodejs, Tailwind CSS</span>
+                              </div>
+                              <div className="button1 mt-auto">
+                                <button className='uppercase font-medium p-3 mx-5 md:mx-10 lg-mx-0 md:my-5 my-2 lg:my-0 lg:mx-0 lg:p-5 items-end cursor-pointer bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-1000'
+                                  onMouseEnter={() => img3.current?.classList.add('scale-80', 'grayscale')}
+                                  onMouseLeave={() => img3.current?.classList.remove('scale-80', 'grayscale')}
+                                >view project</button>
+                              </div>
+                            </div>
+                          </div>
             </div>
             
             <Footer />

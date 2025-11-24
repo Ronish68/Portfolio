@@ -35,8 +35,8 @@ const aboutPage = () => {
     return (
         <>
             <Nav />
-            <div className='about pt-38 mx-10 flex'>
-                <div className="aboutimage w-[540px] max-w-full ">
+            <div className='about pt-28 md:pt-38 mx-10 flex flex-col lg:flex-row'>
+                <div className="aboutimage w-[390px] md:w-[540px] max-w-full ">
                     <Image
                         src="/ronish12.jpg"
                         alt="Hero Portrait"
@@ -45,8 +45,8 @@ const aboutPage = () => {
                         className=" w-full h-auto rounded-lg"
                     />
                 </div>
-                <div className="aboutdesc w-1/2 mx-20 my-10">
-                    <h1 className='uppercase font-bold text-6xl'>Hi, i am <span className='text-stroke text-transparent'>Ronish</span></h1>
+                <div className="aboutdesc md:w-1/2 md:mx-20 my-10">
+                    <h1 className='uppercase font-bold text-4xl sm:text-4xl md:text-5xl lg:text-6xl'>Hi, i am <span className='text-stroke text-transparent'>Ronish</span></h1>
                     <p className='mt-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, facilis quas minima praesentium quasi deserunt! Dolorem saepe magni perferendis, incidunt quia dicta delectus debitis maxime veniam, beatae aliquam sapiente fugiat!
                         <br />
                         <br />
