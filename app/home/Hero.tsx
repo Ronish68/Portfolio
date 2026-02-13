@@ -66,11 +66,11 @@ const HeroSection = () => {
     return (
         <>
             <section className="hero-section relative w-full h-screen bg-black overflow-hidden">
-                
+
                 <div className="absolute inset-0 flex justify-center items-center">
                     <div ref={scaleRef} className="w-[340px] sm:w-[420px] md:w-[500px] lg:w-[540px] max-w-full absolute z-5">
                         <Image
-                            src="/ronish12.jpg"
+                            src="/images/ronish12.jpg"
                             alt="Hero Portrait"
                             width={720}
                             height={480}
