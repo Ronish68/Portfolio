@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import Nav from '../components/Nav'
+import Nav from '@/components/Nav'
 import { useEffect, useState } from 'react'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import gsap from 'gsap'

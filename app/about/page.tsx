@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import Nav from '../components/Nav'
+import Nav from '@/components/Nav'
 import Image from 'next/image'
-import Footer from '../components/Footer'
+import Footer from '@/components/Footer'
 import { useEffect, useState } from 'react'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import gsap from 'gsap'
@@ -10,12 +10,12 @@ import gsap from 'gsap'
 gsap.registerPlugin(ScrollTrigger)
 const aboutPage = () => {
     const [isMounted, setIsMounted] = useState(false);
-    
+
     useEffect(() => {
-      setIsMounted(true);
+        setIsMounted(true);
     }, []);
-    
-     useEffect(() => {
+
+    useEffect(() => {
         if (!isMounted) return;
         const textElements = document.querySelectorAll(".textSlideUp");
         textElements.forEach((element) => {
@@ -38,7 +38,7 @@ const aboutPage = () => {
             <div className='about pt-28 md:pt-38 mx-10 flex flex-col lg:flex-row'>
                 <div className="aboutimage w-[390px] md:w-[540px] max-w-full ">
                     <Image
-                        src="/ronish12.jpg"
+                        src="/images/ronish12.jpg"
                         alt="Hero Portrait"
                         width={4000}
                         height={4000}
